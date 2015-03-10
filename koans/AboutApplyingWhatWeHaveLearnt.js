@@ -52,7 +52,9 @@ describe("About Applying What We Have Learnt", function() {
 
       var hasMushrooms = function() {
         var isMushrooms = false;
+        console.log('yo');
         for (var i in this.ingredients) {
+          console.log(ingredients[i]);
           if (ingredients[i] === 'mushrooms') {
             isMushrooms = true;
           }
@@ -60,7 +62,7 @@ describe("About Applying What We Have Learnt", function() {
         return isMushrooms;
       };
 
-      // productsICanEat = _(nutFree).any(!hasMushrooms);
+      productsICanEat = _(nutFree).any(!hasMushrooms);
 
       // console.log(productsICanEat);
 
